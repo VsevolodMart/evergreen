@@ -1,0 +1,221 @@
+/* extends*/
+@media only screen and (max-width: 749px) {
+  body .header .holder {
+    width: 370px; }
+    body .header .holder .title {
+      font-size: 18px;
+      margin: 24px 0 0 10px; }
+  body .header .holder .header__small-menu {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative; }
+    body .header .holder .header__small-menu ul {
+      width: 150px;
+      height: 150px;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: -17px 0 0 30%;
+      background-color: rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+      body .header .holder .header__small-menu ul li {
+        margin: 0;
+        padding: 6px 0 0 0;
+        display: block; }
+        body .header .holder .header__small-menu ul li a {
+          padding: 0;
+          display: block;
+          font-size: 12px; }
+    body .header .holder .header__small-menu .language {
+      margin: -104px 0 0 79%;
+      position: static; }
+  body .header .holder .header__main-menu {
+    margin-top: 76px; }
+    body .header .holder .header__main-menu .main-menu__list {
+      width: 140px;
+      height: 150px;
+      padding: 0;
+      display: none; }
+      body .header .holder .header__main-menu .main-menu__list .dropdown a {
+        font-size: 0.8em; }
+        body .header .holder .header__main-menu .main-menu__list .dropdown a:nth-child(1):hover:after {
+          -webkit-transform: rotate(0deg);
+             -moz-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+               -o-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+      body .header .holder .header__main-menu .main-menu__list .dropdown-content {
+        margin: -19px 0 0 140px;
+        padding: 0 0; }
+      body .header .holder .header__main-menu .main-menu__list .shopping-cart {
+        width: 100%;
+        margin: 0 0 0 0;
+        display: block; }
+        body .header .holder .header__main-menu .main-menu__list .shopping-cart:before {
+          margin: 3px 0 0 14px; }
+        body .header .holder .header__main-menu .main-menu__list .shopping-cart a {
+          font-size: 0.8em;
+          margin: 16px 0 0 56px; }
+  body .main-section:after {
+    background: none;
+    height: 585px; }
+  body .main-section .holder {
+    width: 960px; }
+    body .main-section .holder:before {
+      margin-left: 0.5%;
+      width: 158.33333px;
+      height: 286.66667px;
+      -o-background-size: contain;
+         background-size: contain; }
+    body .main-section .holder .main-title {
+      font-size: 30px; }
+      body .main-section .holder .main-title span:first-child {
+        margin-left: 0; }
+        body .main-section .holder .main-title span:first-child span {
+          margin-left: 0; }
+    body .main-section .holder .advantages {
+      margin-left: 23.5%;
+      margin-top: 32px; }
+      body .main-section .holder .advantages .title {
+        font-size: 22px; }
+      body .main-section .holder .advantages .small-text {
+        font-size: 10px; }
+      body .main-section .holder .advantages .result {
+        font-size: 24px; }
+    body .main-section .holder .get-to-know {
+      margin-left: 11%;
+      margin-top: 33%; }
+    body .main-section .holder .calculator {
+      margin-left: 47.2%;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      z-index: 12;
+      display: block; }
+      body .main-section .holder .calculator .title {
+        font-size: 30px; }
+      body .main-section .holder .calculator .small-text {
+        font-size: 12px; }
+      body .main-section .holder .calculator .form label {
+        font-size: 12px; }
+      body .main-section .holder .calculator .form .total .total__title {
+        font-size: 14px; }
+      body .main-section .holder .calculator .form .total .sum {
+        font-size: 22px; } }
+
+@media only screen and (min-width: 750px) and (max-width: 959px) {
+  body .header .holder {
+    width: 740px; }
+  body .header .holder .header__small-menu ul li {
+    margin: 0 20px 0 0; }
+  body .header .holder .header__main-menu {
+    margin-top: 76px; }
+    body .header .holder .header__main-menu .main-menu__list {
+      width: 140px;
+      height: 150px;
+      padding: 0;
+      display: none; }
+      body .header .holder .header__main-menu .main-menu__list .dropdown a {
+        font-size: 0.8em; }
+        body .header .holder .header__main-menu .main-menu__list .dropdown a:nth-child(1):hover:after {
+          -webkit-transform: rotate(0deg);
+             -moz-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+               -o-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+      body .header .holder .header__main-menu .main-menu__list .dropdown-content {
+        margin: -19px 0 0 140px;
+        padding: 0 0; }
+      body .header .holder .header__main-menu .main-menu__list .shopping-cart {
+        width: 100%;
+        margin: 0 0 0 0;
+        display: block; }
+        body .header .holder .header__main-menu .main-menu__list .shopping-cart:before {
+          margin: 3px 0 0 14px; }
+        body .header .holder .header__main-menu .main-menu__list .shopping-cart a {
+          font-size: 0.8em;
+          margin: 16px 0 0 56px; }
+  body .main-section:after {
+    background: none;
+    height: 585px; }
+  body .main-section .holder {
+    width: 960px; }
+    body .main-section .holder:before {
+      margin-left: 0.5%;
+      width: 158.33333px;
+      height: 286.66667px;
+      -o-background-size: contain;
+         background-size: contain; }
+    body .main-section .holder .main-title {
+      font-size: 50px;
+      margin: -250px 0 0 28.2%; }
+      body .main-section .holder .main-title span:first-child span {
+        margin-left: -258px; }
+    body .main-section .holder .advantages {
+      margin-left: 23.5%;
+      margin-top: 32px; }
+      body .main-section .holder .advantages .title {
+        font-size: 22px; }
+      body .main-section .holder .advantages .small-text {
+        font-size: 10px; }
+      body .main-section .holder .advantages .result {
+        font-size: 24px; }
+    body .main-section .holder .get-to-know {
+      margin-left: 11%;
+      margin-top: 33%; }
+    body .main-section .holder .calculator {
+      margin-left: 47.2%;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      z-index: 12;
+      display: block; }
+      body .main-section .holder .calculator .title {
+        font-size: 30px; }
+      body .main-section .holder .calculator .small-text {
+        font-size: 12px; }
+      body .main-section .holder .calculator .form label {
+        font-size: 12px; }
+      body .main-section .holder .calculator .form .total .total__title {
+        font-size: 14px; }
+      body .main-section .holder .calculator .form .total .sum {
+        font-size: 22px; } }
+
+@media only screen and (min-width: 960px) and (max-width: 1169px) {
+  body .header .holder {
+    width: 900px; }
+  body .header .holder .header__main-menu .main-menu__list .dropdown a {
+    font-size: 0.8em; }
+  body .header .holder .header__main-menu .main-menu__list .shopping-cart {
+    width: 160px; }
+    body .header .holder .header__main-menu .main-menu__list .shopping-cart:before {
+      margin: 3px 0 0 24px; }
+    body .header .holder .header__main-menu .main-menu__list .shopping-cart a {
+      font-size: 0.8em;
+      margin: 16px 0 0 66px; }
+  body .main-section .holder {
+    width: 960px; }
+    body .main-section .holder:before {
+      margin-left: 0; }
+    body .main-section .holder .main-title {
+      margin-left: 9%; }
+    body .main-section .holder .advantages {
+      margin-left: 30%; }
+    body .main-section .holder .get-to-know {
+      margin-left: 21%; }
+    body .main-section .holder .calculator {
+      margin-left: 67%; } }

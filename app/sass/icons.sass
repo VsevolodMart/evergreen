@@ -1,0 +1,132 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$cancel-name: 'cancel'
+$cancel-x: 0px
+$cancel-y: 91px
+$cancel-offset-x: 0px
+$cancel-offset-y: -91px
+$cancel-width: 32px
+$cancel-height: 32px
+$cancel-total-width: 35px
+$cancel-total-height: 229px
+$cancel-image: '../img/icons.png'
+$cancel: (0px, 91px, 0px, -91px, 32px, 32px, 35px, 229px, '../img/icons.png', 'cancel', )
+$cart-name: 'cart'
+$cart-x: 0px
+$cart-y: 49px
+$cart-offset-x: 0px
+$cart-offset-y: -49px
+$cart-width: 22px
+$cart-height: 22px
+$cart-total-width: 35px
+$cart-total-height: 229px
+$cart-image: '../img/icons.png'
+$cart: (0px, 49px, 0px, -49px, 22px, 22px, 35px, 229px, '../img/icons.png', 'cart', )
+$dropdown-arrow-name: 'dropdown_arrow'
+$dropdown-arrow-x: 0px
+$dropdown-arrow-y: 0px
+$dropdown-arrow-offset-x: 0px
+$dropdown-arrow-offset-y: 0px
+$dropdown-arrow-width: 7px
+$dropdown-arrow-height: 4px
+$dropdown-arrow-total-width: 35px
+$dropdown-arrow-total-height: 229px
+$dropdown-arrow-image: '../img/icons.png'
+$dropdown-arrow: (0px, 0px, 0px, 0px, 7px, 4px, 35px, 229px, '../img/icons.png', 'dropdown_arrow', )
+$menu-name: 'menu'
+$menu-x: 0px
+$menu-y: 143px
+$menu-offset-x: 0px
+$menu-offset-y: -143px
+$menu-width: 32px
+$menu-height: 32px
+$menu-total-width: 35px
+$menu-total-height: 229px
+$menu-image: '../img/icons.png'
+$menu: (0px, 143px, 0px, -143px, 32px, 32px, 35px, 229px, '../img/icons.png', 'menu', )
+$path-arrow-name: 'path_arrow'
+$path-arrow-x: 0px
+$path-arrow-y: 24px
+$path-arrow-offset-x: 0px
+$path-arrow-offset-y: -24px
+$path-arrow-width: 3px
+$path-arrow-height: 5px
+$path-arrow-total-width: 35px
+$path-arrow-total-height: 229px
+$path-arrow-image: '../img/icons.png'
+$path-arrow: (0px, 24px, 0px, -24px, 3px, 5px, 35px, 229px, '../img/icons.png', 'path_arrow', )
+$star-name: 'star'
+$star-x: 0px
+$star-y: 195px
+$star-offset-x: 0px
+$star-offset-y: -195px
+$star-width: 35px
+$star-height: 34px
+$star-total-width: 35px
+$star-total-height: 229px
+$star-image: '../img/icons.png'
+$star: (0px, 195px, 0px, -195px, 35px, 34px, 35px, 229px, '../img/icons.png', 'star', )
+$spritesheet-width: 35px
+$spritesheet-height: 229px
+$spritesheet-image: '../img/icons.png'
+$spritesheet-sprites: ($cancel, $cart, $dropdown-arrow, $menu, $path-arrow, $star, )
+$spritesheet: (35px, 229px, '../img/icons.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

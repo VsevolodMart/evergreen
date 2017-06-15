@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+head
+  meta(charset="UTF-8")
+  meta(name="veiwport", content="width=device-width, initial-scale=1.0")
+  title Our Website
+  link(rel="stylesheet", href="css/main.css")
+  link(rel="stylesheet", href="css/owl.carousel.min.css")
+  link(rel="stylesheet", href="css/owl.theme.default.min.css")
+  script(src="js/libs.min.js")
+  script(src="js/main.js")
+html(lang="en")
+  body
+    .wrapper
+      //Header-section
+      header.header
+        .holder
+          .open
+          .close
+          h1.title Добриво
+          //small menu
+          nav.header__small-menu
+            ul
+              li
+                a(href='#') оплата и доставка
+              li
+                a(href='#') новости
+              li
+                a(href='#') справочник
+              li
+                a(href='#') сертификаты
+            .language
+              .dropbtn
+                a(href='#') ru
+              .language-content
+                a(href='#') ua
+          //small menu end
+          //main menu
+          nav.header__main-menu
+            ul.main-menu__list
+              li.dropdown
+                a(href='#') нагро-удобрение
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1 very long
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.dropdown
+                a(href='#') биодизель
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.dropdown
+                a(href='#') силко
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1  go go go
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.dropdown
+                a(href='#') интернет-магазин
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.dropdown
+                a(href='#') вопросы-ответы
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.dropdown
+                a(href='#') контакты
+                ul.dropdown-content
+                  li
+                    a(href='#') item 1
+                  li
+                    a(href='#') item 2
+                  li
+                    a(href='#') item 3
+              li.shopping-cart
+                a(href='#') корзина
+            //main menu end
+      //Main-section
+      section.main-section
+        .holder
+          h2.main-title Органическое
+            span нано-удобние
+              span добриво
+          .advantages
+            h3.title Прирост урожая
+            p.small-text в сравнении с химическим удобрением
+            p.result 30%-250%
+
+            h3.title экономия
+            p.small-text химических удобрений в хозяйстве
+            p.result до 70%
+
+            h3.title рост корневой
+            p.small-text системы при использовании
+            p.result в 3-10раз
+          .get-to-know
+            h2.title Узнайте
+              br
+              |о нагро больше!
+            button.button Узнать больше
+          .calculator
+            h2.title Посчитайте прибыль
+            h4.small-text
+              span Добриво
+              |  эффективнее химии
+            hr
+            form.form#form(action='/' method='GET' name='calculate_form')
+              label Выберите культуру
+              .select
+                select(name='culture')
+                  option Пшеница ≈ 3100 грн / т
+                  option Арбузы ≈ 3100 грн / т
+                  option Тыквы ≈ 3100 грн / т
+              label Урожайность, ц/га
+              input(type='text' name='harvest' class='harvest' placeholder='20')
+              label Стоимость хим. удобрения, грн/га
+              input(type='text' name='cost' class='cost' placeholder='3000')
+              label Посевная площадь, га
+              input(type='text' name='area' class='area' placeholder='10')
+            hr
+            .total
+              p.total__title прибыль от добрива
+              h2.sum 50 000
+              p.currency грн.

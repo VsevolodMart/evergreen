@@ -1,0 +1,103 @@
+@mixin before()
+  content: ""
+  top: 0
+  left: 0
+  position: absolute
+
+%before
+  @include before
+
+@mixin after()
+  content: ""
+  top: 0
+  left: 0
+  position: absolute
+
+%after
+  @include after
+
+@mixin flex-row()
+  display: flex
+  flex-flow: row wrap
+
+%flex-row
+  @include flex-row
+
+@mixin flex-column()
+  display: flex
+  flex-flow: column wrap
+
+%flex-column
+  @include flex-column
+
+@mixin ul()
+  list-style: none
+  padding: 0
+  margin: 0
+%ul
+  @include ul
+
+@mixin button()
+  background-color: transparent
+  border: none
+
+%button
+  @include button
+
+@mixin main-titles()
+  color: $main-titles
+  font-family: $RobotoCondensedRegular
+  font-size: 50px
+  text-transform: uppercase
+
+%main-titles
+  @include main-titles
+
+@mixin h3()
+  color: $secondary-titles
+  font-size: 24px
+  font-family: $RobotoCondensedRegular
+  text-transform: uppercase
+
+%h3
+  @include h3
+
+@mixin h2()
+  color: $secondary-titles
+  font-size: 40px
+  font-family: $RobotoCondensedRegular
+  text-transform: uppercase
+
+%h2
+  @include h2
+
+@mixin h4()
+  color: $secondary-titles
+  font-size: 16px
+  font-family: $RobotoCondensedRegular
+  text-transform: uppercase
+
+%h4
+  @include h4
+
+#area-error, #harvest-error, #cost-error
+  color: $white
+  position: absolute
+  margin: -8px 0 0 -385px
+  background-color: $orange
+  padding: 5px 5px
+  width: 84px
+  font-weight: 700
+  &:after
+    @extend %after
+    width: 0
+    height: 0
+    border: 24px solid
+    border-color: transparent
+    border-left-color: $orange
+    margin: 0 0 0 84px
+
+
+*
+  box-sizing: border-box
+

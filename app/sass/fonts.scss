@@ -1,0 +1,140 @@
+// Since .woff has almost perfect support all the way back to IE9 except for Opera Mini,
+// I removed the calls to .eot, .ttf and .svg. to streamline the mixin -- http://caniuse.com/#search=woff
+// Note: IE8, IE7, IE6, old Safari in Android and iOS will gracefuly degrade to system fonts.
+
+//RobotoRegular
+$RobotoRegular: 'Roboto_Regular';
+$RobotoRegularPath: '../fonts/Roboto-Regular';
+
+
+//RobotoBold
+$RobotoBold: 'Roboto_Bold';
+$RobotoBoldPath: '../fonts/Roboto-Bold';
+
+
+//RobotoBlack
+$RobotoBlack: 'Roboto_Black';
+$RobotoBlackPath: '../fonts/Roboto-Black';
+
+
+//RobotoLight
+$RobotoLight: 'Roboto_Light';
+$RobotoLightPath: '../fonts/Roboto-Light';
+
+//CondensedRegular
+$RobotoCondensedRegular: 'Roboto_CondensedRegular';
+$RobotoCondensedRegularPath: '../fonts/RobotoCondensed-Regular';
+
+//RobotoCondensedBold
+$RobotoCondensedBold: 'Roboto_CondensedBold';
+$RobotoCondensedBoldPath: '../fonts/RobotoCondensed-Bold';
+
+
+
+ /*this mixin for good displaing in all browsers*/
+
+@mixin RobotoRegular($RobotoRegular, $RobotoRegularPath) {
+  @font-face {
+    font: {
+      family: $RobotoRegular;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$RobotoRegularPath}.eot'); //IE9 Compat Modes
+    src: url('#{$RobotoRegularPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('#{$RobotoRegularPath}.woff') format('woff'), //Modern Browsers
+         url('#{$RobotoRegularPath}.woff2') format('woff2'), //Modern Browsers
+         url('#{$RobotoRegularPath}.ttf') format('truetype'), //Safari, Android, iOS
+         url('#{$RobotoRegularPath}.svg##{$RobotoRegular}') format('svg'); //Old iOS devices
+  }
+}
+@mixin RobotoBold($RobotoBold, $RobotoBoldPath) {
+  @font-face {
+    font: {
+      family: $RobotoBold;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$RobotoBoldPath}.eot'); //IE9 Compat Modes
+    src: url('#{$RobotoBoldPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('#{$RobotoBoldPath}.woff') format('woff'), //Modern Browsers
+         url('#{$RobotoBoldPath}.woff2') format('woff2'), //Modern Browsers
+         url('#{$RobotoBoldPath}.ttf') format('truetype'), //Safari, Android, iOS
+         url('#{$RobotoBoldPath}.svg##{$RobotoBold}') format('svg'); //Old iOS devices
+  }
+}
+@mixin RobotoBlack($RobotoBlack, $RobotoBlackPath) {
+  @font-face {
+    font: {
+      family: $RobotoBlack;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$RobotoBlackPath}.eot'); //IE9 Compat Modes
+    src: url('#{$RobotoBlackPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('#{$RobotoBlackPath}.woff') format('woff'), //Modern Browsers
+         url('#{$RobotoBlackPath}.woff') format('woff2'), //Modern Browsers
+         url('#{$RobotoBlackPath}.ttf') format('truetype'), //Safari, Android, iOS
+         url('#{$RobotoBlackPath}.svg##{$RobotoBlack}') format('svg'); //Old iOS devices
+  }
+}
+
+@mixin RobotoLight($RobotoLight, $RobotoLightPath) {
+  @font-face {
+    font: {
+      family: $RobotoLight;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$RobotoLightPath}.eot'); //IE9 Compat Modes
+    src: url('#{$RobotoLightPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+         url('#{$RobotoLightPath}.woff') format('woff'), //Modern Browsers
+         url('#{$RobotoLightPath}.woff') format('woff2'), //Modern Browsers
+         url('#{$RobotoLightPath}.ttf') format('truetype'), //Safari, Android, iOS
+         url('#{$RobotoLightPath}.svg##{$RobotoLight}') format('svg'); //Old iOS devices
+  }
+}
+
+@mixin CondensedRegular($CondensedRegular, $CondensedRegularPath) {
+  @font-face {
+    font: {
+      family: $CondensedRegular;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$CondensedRegularPath}.eot'); //IE9 Compat Modes
+    src: url('#{$CondensedRegularPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+    url('#{$CondensedRegularPath}.woff') format('woff'), //Modern Browsers
+    url('#{$CondensedRegularPath}.woff') format('woff2'), //Modern Browsers
+    url('#{$CondensedRegularPath}.ttf') format('truetype'), //Safari, Android, iOS
+    url('#{$CondensedRegularPath}.svg##{$CondensedRegular}') format('svg'); //Old iOS devices
+  }
+}
+
+@mixin RobotoCondensedBold($RobotoCondensedBold, $RobotoCondensedBoldPath) {
+  @font-face {
+    font: {
+      family: $RobotoCondensedBold;
+      weight: normal;
+      style: normal;
+    }
+    src: url('#{$RobotoCondensedBoldPath}.eot'); //IE9 Compat Modes
+    src: url('#{$RobotoCondensedBoldPath}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+    url('#{$RobotoCondensedBoldPath}.woff') format('woff'), //Modern Browsers
+    url('#{$RobotoCondensedBoldPath}.woff') format('woff2'), //Modern Browsers
+    url('#{$RobotoCondensedBoldPath}.ttf') format('truetype'), //Safari, Android, iOS
+    url('#{$RobotoCondensedBoldPath}.svg##{$RobotoCondensedBold}') format('svg'); //Old iOS devices
+  }
+}
+
+@include RobotoRegular($RobotoRegular, $RobotoRegularPath);
+@include RobotoBold($RobotoBold, $RobotoBoldPath);
+@include RobotoBlack($RobotoBlack, $RobotoBlackPath);
+@include RobotoCondensedBold($RobotoCondensedBold, $RobotoCondensedBoldPath);
+@include RobotoLight($RobotoLight, $RobotoLightPath);
+@include CondensedRegular($RobotoCondensedRegular, $RobotoCondensedRegularPath);
+
+
+
+
+
