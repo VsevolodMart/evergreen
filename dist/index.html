@@ -1,19 +1,24 @@
 <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="veiwport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Website</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="veiwport" content="width=device-width, initial-scale=1.0"/>
-    <title>Our Website</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <script src="js/libs.min.js"></script>
-    <script src="js/main.js"></script>
-  </head>
   <body>
     <div class="wrapper">
       <!--Header-section-->
       <header class="header">
         <div class="holder">
+          <div class="open"></div>
+          <div class="close"></div>
           <h1 class="title">Добриво</h1>
+          <!--small menu-->
           <nav class="header__small-menu">
             <ul>
               <li><a href="#">оплата и доставка</a></li>
@@ -26,11 +31,13 @@
               <div class="language-content"><a href="#">ua</a></div>
             </div>
           </nav>
+          <!--small menu end-->
+          <!--main menu-->
           <nav class="header__main-menu">
             <ul class="main-menu__list">
               <li class="dropdown"><a href="#">нагро-удобрение</a>
                 <ul class="dropdown-content">
-                  <li><a href="#">item 1</a></li>
+                  <li><a href="#">item 1 very long</a></li>
                   <li><a href="#">item 2</a></li>
                   <li><a href="#">item 3</a></li>
                 </ul>
@@ -44,7 +51,7 @@
               </li>
               <li class="dropdown"><a href="#">силко</a>
                 <ul class="dropdown-content">
-                  <li><a href="#">item 1</a></li>
+                  <li><a href="#">item 1  go go go</a></li>
                   <li><a href="#">item 2</a></li>
                   <li><a href="#">item 3</a></li>
                 </ul>
@@ -72,6 +79,7 @@
               </li>
               <li class="shopping-cart"><a href="#">корзина</a></li>
             </ul>
+            <!--main menu end-->
           </nav>
         </div>
       </header>
@@ -79,7 +87,6 @@
       <section class="main-section">
         <div class="holder">
           <h2 class="main-title">Органическое<span>нано-удобние<span>добриво</span></span></h2>
-          <!--advantages block-->
           <div class="advantages">
             <h3 class="title">Прирост урожая</h3>
             <p class="small-text">в сравнении с химическим удобрением</p>
@@ -99,7 +106,7 @@
             <h2 class="title">Посчитайте прибыль</h2>
             <h4 class="small-text"><span>Добриво</span> эффективнее химии</h4>
             <hr/>
-            <form class="form" action="/" method="GET" name="calculate_form">
+            <form class="form" id="form" action="/" method="GET" name="calculate_form">
               <label>Выберите культуру</label>
               <div class="select">
                 <select name="culture">
@@ -109,11 +116,11 @@
                 </select>
               </div>
               <label>Урожайность, ц/га</label>
-              <input class="harvest" type="text" name="harvest"/>
+              <input class="harvest" type="text" name="harvest" placeholder="20"/>
               <label>Стоимость хим. удобрения, грн/га</label>
-              <input class="cost" type="text" name="cost"/>
+              <input class="cost" type="text" name="cost" placeholder="3000"/>
               <label>Посевная площадь, га</label>
-              <input class="area" type="text" name="area"/>
+              <input class="area" type="text" name="area" placeholder="10"/>
             </form>
             <hr/>
             <div class="total">

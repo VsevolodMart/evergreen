@@ -1,39 +1,91 @@
 $(function() {
-  var input = document.querySelectorAll('input');
-  var inputs = [];
-  for (var i = 0; i <= input.length; i++) {
-    inputs.push(input[i]);
+
+  $('.owl-carousel').owlCarousel({
+    items:1,
+    margin:10,
+    autoHeight:true
+  });
+
+
+function initMenuButtons() {
+  $('.header .holder').prepend('<div class="open">');
+  $('.header .holder').prepend('<div class="close">');
+  $('.open').css({'z-index': '0'});
+  $('.close').css({'z-index': '0'});
+}
+
+
+
+  var windowWidth = $( window ).width();
+  if(windowWidth < 960) {
+    initMenuButtons()
+
   }
 
-  console.log(inputs[2]);
 
-  $('input').change(function () {
+  $('.open').bind('click', function () { open() });
+
+  function open() {
+    $('.main-menu__list').css({'display': 'block'});
+    $('.open').hide();
+    $('.close').show();
+  }
+
+  $('.close').bind('click', function () { close() });
+
+  function close() {
+    $('.main-menu__list').css({'display': 'none'});
+    $('.close').hide();
+    $('.open').show();
+
+  }
+
+  if(windowWidth > 960) {
+    $('.open').css({'z-index': '-1'});
+    $('.close').css({'z-index': '-1'});
+  }
 
 
-    $('.form').validate({
+// $('input').change(function () {
 
-      rules: {
-        harvest: {
-          digits: true
-        },
-        cost: {
-          digits: true
-        },
-        area: {
-          digits: true
-        }
+  $('.form').validate({
+
+    rules: {
+      harvest: {
+        digits: true
       },
-      messages: {
-        harvest: {
-          digits: 'не верное значение'
-        },
-        cost: {
-          digits: 'не верное значение'
-        },
-        area: {
-          digits: 'не верное значение'
-        }
+      cost: {
+        digits: true
+      },
+      area: {
+        digits: true
       }
-    });
+    },
+    messages: {
+      harvest: {
+        digits: 'не верное значение'
+      },
+      cost: {
+        digits: 'не верное значение'
+      },
+      area: {
+        digits: 'не верное значение'
+      }
+    }
+
+
   });
+
+
+
+
+//   $.fn.clearValidation = function(){var v = $(this).validate();$('[name]',this).each(function(){v.successList.push(this);v.showErrors();});v.resetForm();v.reset();};
+// //used:
+//   $("#form").clearValidation();
+
+
+
+
+
+
 });
